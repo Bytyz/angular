@@ -1,0 +1,16 @@
+.line {
+    height: 4px;
+    width: 100px;
+    background: red;
+    transform-origin: 0 50%;
+    margin: 0 auto;
+  }
+  
+  line, .line {
+    animation: growX .6s 0s infinite alternate;
+  }
+  
+  @keyframes growX {
+    from { transform: scaleX(0) }
+    to { transform: scaleX(1) }
+  }

@@ -1,0 +1,21 @@
+.formGroup .btn {
+    margin-top: 15px;
+    font-weight: bold;
+}
+.formGroup .btn:hover {
+    opacity: 0.6;
+}
+.btnPrimary {
+    background-color: green;
+    color: #fff;
+}
+.btnSecondary {
+    background-color: blueviolet;
+    color: #fff; 
+    margin-left: 20px;
+}
+.btnMy {
+    background-color: steelblue;
+    color: #fff; 
+    margin-left: 20px;
+}
