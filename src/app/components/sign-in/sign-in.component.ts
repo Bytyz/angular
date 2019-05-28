@@ -14,7 +14,12 @@ export class SignInComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    document.querySelector(".displayTable").setAttribute('id',"bg");
+    
+   }
 
+   ngOnDestoy() {
+    document.querySelector(".displayTable").setAttribute('id',"");
    }
 
 

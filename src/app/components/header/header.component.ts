@@ -26,4 +26,7 @@ export class HeaderComponent implements OnInit {
        document.getElementsByTagName('head')[0].appendChild(node);
      }
    }
+   ngOnDestoy() {
+    
+   }
 }

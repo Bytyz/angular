@@ -13,8 +13,11 @@ export class SignUpComponent implements OnInit {
     public authService: AuthService
   ) { }
 
- ngOnInit() {
-
+  ngOnInit() {
+    document.querySelector(".displayTable").setAttribute('id',"bg");
    }
 
+   ngOnDestoy() {
+    document.querySelector(".displayTable").setAttribute('id',"");
+     }
 }

@@ -1,9 +1,8 @@
 header {
-    position: fixed;
-    text-align: center;
-    width: 100%;
-    top: 130px;
-    z-index: 1;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 130px;
 }
 .header_div {
     width: 100%;

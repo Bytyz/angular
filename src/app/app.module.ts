@@ -23,7 +23,7 @@ import { environment } from '../environments/environment';
 
 // Auth service
 import { AuthService } from "./shared/services/auth.service";
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
 
 
