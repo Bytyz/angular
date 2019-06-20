@@ -110,9 +110,8 @@ export class AuthService {
       email: user.email,
       displayName: user.displayName,
       photoURL: user.photoURL,
-      emailVerified: user.emailVerified,
-      loginTime: user.loginTime
-    }
+      emailVerified: user.emailVerified
+        }
     return userRef.set(userData, {
       merge: true
     })

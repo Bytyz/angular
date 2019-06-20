@@ -68,7 +68,11 @@
 
       </div>
       <div class="list_of_question">
-        
+        <div class="question_row">
+          <ul class="question_body">
+            <li *ngFor="let item of question_list">{{item}}</li>
+          </ul>
+        </div>
       </div>
     </main>
 

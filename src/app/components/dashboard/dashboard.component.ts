@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 export class DashboardComponent implements OnInit {
 
     model = '';
+    public question_list = [];
 
   constructor(
     public authService: AuthService,
@@ -42,27 +43,38 @@ console.log("newQuestion " + questionData.message);
 }
 
   getAllQuestions() {
-  this.dataBase.collection("question").get().subscribe(function(querySnapshot) {
-    querySnapshot.forEach(function(doc) {
-        console.log(doc.id, " => ", doc.data().user);
-    });
-});
+    //массив вопросов и вывод через ngFor, валидация пустого вопроса
+    this.question_list = [];
+
+    
+    
+  this.dataBase.collection("question").get().subscribe(querySnapshot =>{
+    querySnapshot.forEach(doc => {
+
+      this.question_list.push(doc.id);
+              console.log(doc.id, " => ", doc.data().user);
+              console.log(this.question_list);
+          });
+      });
   }
 
 
       
   getOnlyMy(userId) { 
-    
-    let you = this.dataBase.collection('users', ref => ref.where('uid', '==', userId))
-        
-        console.log(you.get().subscribe(function(querySnapshot) {
+    this.question_list = [];
+    let you = this.dataBase.collection('question', ref => ref.where('userId', '==', userId))
+        console.log(userId);
+        you.get().subscribe(querySnapshot => {
           
-          querySnapshot.forEach(function(doc) {
-            console.log(doc.id, " => ", doc.data().loginTime);
-        });
+          querySnapshot.forEach(doc => {
+
+            this.question_list.push(doc.id);
+                    console.log(doc.id, " => ", doc.data().user);
+                    console.log(this.question_list);
+                });
           })
-        )
-        console.log(you);
+        
+        //console.log(you);
     
   }
   
