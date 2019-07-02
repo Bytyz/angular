@@ -1,0 +1,14 @@
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="nav-link active" href="/dashboard">
+        <i class="fas fa-user"></i>User Profile
+      </a>
+      <a class="nav-link" (click)="authService.SignOut()">
+          <i class="fas fa-sign-out-alt"></i>Log out
+        </a>
+  <a href="" class="navbar-link">Все вопросы</a>
+  <a href="/creation" class="navbar-link">Задать вопрос</a>
+  <a class="navbar-link" routerLink="/register-student">
+    <img class="brand-logo" src="assets/img/galaxy.svg" alt="New Logo" width="20">
+    <span class="dasboard-text">Личный кабинет</span>
+  </a>
+</nav>

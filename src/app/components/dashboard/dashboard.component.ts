@@ -29,21 +29,21 @@ export class DashboardComponent implements OnInit {
 
   
 
-  ngOnInit() { }
+  ngOnInit() {}
 
-  askQuestion(userId) {
+  askQuestion(userId) {  //сделать валидацию пустого вопроса
     let date = new Date();
 
     let value = this.model;
     
     let questionData = { userId:userId, message:value, date:date}
-console.log("newQuestion " + questionData.message);
+    console.log("newQuestion " + questionData.message);
 
- this.dataBase.collection("question").add(questionData);
+    this.dataBase.collection("question").add(questionData);
 }
 
   getAllQuestions() {
-    //массив вопросов и вывод через ngFor, валидация пустого вопроса
+   
     this.question_list = [];
 
     

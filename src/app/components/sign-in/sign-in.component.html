@@ -14,7 +14,7 @@
         <input type="password" class="formControl" placeholder="Password" #userPassword required>
       </div>
 
-      <!-- Calling SignIn Api from AuthService -->
+      <!-- AuthService -->
       <div class="formGroup">
         <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
       </div>
@@ -23,7 +23,7 @@
         <span class="or"><span class="orInner">Or</span></span>
       </div>
 
-      <!-- Calling GoogleAuth Api from AuthService -->
+      <!--GoogleAuth -->
       <div class="formGroup">
         <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
           <i class="fab fa-google-plus-g"></i>

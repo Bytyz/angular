@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    padding: 6px 20px;
+}
+.dasboard-text {
+    color: #E91E63;
+    font-size: 1.25rem;
+}
+.brand-logo {
+    width: 40px;
+    fill: #E91E63;
+}
+.navbar-link {
+    margin-right: 20px;
+    margin-left: 0;
+    font-size: 26px;
+    color: #fff;
+    text-decoration: none;
+}
+.navbar-link:hover {
+    color: #222;
+}
