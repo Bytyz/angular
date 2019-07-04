@@ -1,3 +1,12 @@
+<app-topmenu></app-topmenu>
 <p>
   allquestion works!
 </p>
+
+<div class="list_of_question">
+  <div class="question_row">
+    <ul class="question_body">
+      <li *ngFor="let item of question_list" ><a routerLink="/detail/{{item}}">{{item}}</a></li>
+    </ul>
+  </div>
+</div>

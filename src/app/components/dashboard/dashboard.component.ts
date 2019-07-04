@@ -31,6 +31,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {}
 
+
   askQuestion(userId) {  //сделать валидацию пустого вопроса
     let date = new Date();
 
@@ -62,9 +63,9 @@ export class DashboardComponent implements OnInit {
       
   getOnlyMy(userId) { 
     this.question_list = [];
-    let you = this.dataBase.collection('question', ref => ref.where('userId', '==', userId))
+    let yours = this.dataBase.collection('question', ref => ref.where('userId', '==', userId))
         console.log(userId);
-        you.get().subscribe(querySnapshot => {
+        yours.get().subscribe(querySnapshot => {
           
           querySnapshot.forEach(doc => {
 

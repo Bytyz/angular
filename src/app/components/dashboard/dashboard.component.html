@@ -4,7 +4,7 @@
   <div class="row">
 
 
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <main role="main" class="col-12 ml-sm-auto px-4">
       <div class="inner-adjust">
 
         <div class="pt-3 pb-2 mb-3 border-bottom">
@@ -45,7 +45,7 @@
       <div class="list_of_question">
         <div class="question_row">
           <ul class="question_body">
-            <li *ngFor="let item of question_list">{{item}}</li>
+            <li *ngFor="let item of question_list" ><a routerLink="/detail/{{item}}">{{item}}</a></li>
           </ul>
         </div>
       </div>

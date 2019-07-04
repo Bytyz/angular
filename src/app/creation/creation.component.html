@@ -1,3 +1,16 @@
 <app-topmenu></app-topmenu>
-<br><br><br><br><br><br>
-<h1>Creat a question</h1>
+
+<div class="constainer" *ngIf="authService.userData as user">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="formGroup">
+                <input type="text" class="formControl question" placeholder="Задайте свой вопрос" name="newQuestion" required ng-model="askQuestion" [(ngModel)]="model" required>
+
+            </div>
+            <div class="formGroup">
+                <button type="button" class="btn btnPrimary" (click)="askQuestion(user.uid)" ng-required="string">Задать новый вопрос</button>
+            </div>
+
+        </div>
+    </div>
+</div>
