@@ -18,6 +18,7 @@ export class DetailedComponent implements OnInit {
       public router: Router,
       public ngZone: NgZone,
       private dataBase: AngularFirestore,
+
   ) { }
 
     ngOnInit(): void {
@@ -28,10 +29,16 @@ export class DetailedComponent implements OnInit {
     getId() {
         this.route.params.subscribe((params) => {
             const id: string =  params.id;
-            alert (id);
+            return this.dataBase.collection("question").doc(id).ref.get().then(function(doc) {
+                if (doc.exists) {
+                    console.log(doc.data());
+                } else {
+                    console.log("No such document!");
+                }
+            }).catch(function(error) {
+                console.log("Error getting document:", error);
+            });
+
         })
-    }
 
-
-
-}
+    };}
